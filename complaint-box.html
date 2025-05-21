@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Complaint Box 💌</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ffe0ec, #e0f7ff);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 90%;
+      max-width: 400px;
+      height: 100px;
+      padding: 12px;
+      border: 2px solid #ff99c8;
+      border-radius: 12px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      resize: none;
+      background-color: #fff;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff85a2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #ff5d8f;
+    }
+
+    .thanks-message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #28a745;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Complaint Box 💌</h1>
+
+  <form action="https://formsubmit.co/meghanitaha@gmail.com" method="POST" onsubmit="showThankYou()">
+    <textarea name="Complaint" placeholder="Type your complaint with emojis 😤❤️..." required></textarea>
+    <br />
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    <button type="submit">Submit Complaint 🚀</button>
+  </form>
+
+  <div class="thanks-message" id="thanksMessage">
+    Complaint sent! 💌 You'll get the email right away.
+  </div>
+
+  <script>
+    function showThankYou() {
+      setTimeout(() => {
+        document.getElementById("thanksMessage").style.display = "block";
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
+
